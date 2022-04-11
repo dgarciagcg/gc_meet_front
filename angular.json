@@ -26,11 +26,32 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "allowedCommonJsDependencies": [
+              "pdfmake",
+              "core-js",
+              "xlsx",
+              "raf"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-spinner/animations/square-jelly-box.css",
+              "src/styles/background.scss",
+              "src/styles/badge.scss",
+              "src/styles/button.scss",
+              "src/styles/card.scss",
+              "src/styles/collapsable.scss",
+              "src/styles/form.scss",
+              "src/styles/helper.scss",
+              "src/styles/layout.scss",
+              "src/styles/list.scss",
+              "src/styles/modal.scss",
+              "src/styles/progress.scss",
+              "src/styles/table.scss",
+              "src/styles/tabs.scss",
+              "src/styles/theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -40,13 +61,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "2.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "16kb"
                 }
               ],
               "fileReplacements": [
@@ -103,6 +124,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
